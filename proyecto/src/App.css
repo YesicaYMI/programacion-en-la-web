@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos adicionales para la aplicación */
+
+/* Fondo de la aplicación */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #4a90e2; /* Azul de Tailwind */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Botones */
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Tarjetas de productos */
+  .product-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  

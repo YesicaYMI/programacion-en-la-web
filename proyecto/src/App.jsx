@@ -1,20 +1,24 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Login from './pages/Login.jsx';
-import RegistroUsuario from './pages/RegistroUsuario.jsx';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Productos from './pages/Productos';
+import DetalleProducto from './pages/DetalleProducto';
+import Home from './pages/Home';
+import './app.css';  // Importa el archivo CSS aquí
 
 const App = () => {
   return (
     <Router>
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">Bienvenido a la Tienda</h1>
-        <nav className="flex justify-center mb-4">
-          <Link to="/login" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login</Link>
-          <Link to="/registro" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ml-4">Registro</Link>
-        </nav>
+      <header>
+        <h1 className="text-4xl font-bold">Mi Aplicación</h1>
+      </header>
+      <div className="container">
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<RegistroUsuario />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/productos/:id" element={<DetalleProducto />} />
         </Routes>
       </div>
     </Router>
